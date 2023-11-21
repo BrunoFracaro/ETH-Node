@@ -1,5 +1,8 @@
 ## ECDSA Node
 
+#### My implementation consist of the user using its private key to sign a hahsed message. This message is passed to the server where is decrypted to obtain the users publick key. With the publick key the server moves the funds from the sender to the recipient, who was identified in the frontend by its public key. This implementation was used to make sure someone listening to the data traffic cant see the senders private Key. Regarding filling the private key in the front end this is now desired, but in any application (like metamask) this needs to happen at some point.
+
+
 This project is an example of using a client and server to facilitate transfers between different addresses. Since there is just a single server on the back-end handling transfers, this is clearly very centralized. We won't worry about distributed consensus for this project.
 
 However, something that we would like to incoporate is Public Key Cryptography. By using Elliptic Curve Digital Signatures we can make it so the server only allows transfers that have been signed for by the person who owns the associated address.
